@@ -105,9 +105,9 @@ export default function ForgotPasswordPage() {
               <div className="lg:hidden"><Brand /></div>
               <div className="sr-only lg:not-sr-only"><Brand /></div>
 
-              <div className="mt-8 lg:mt-0">
+              <div className="mt-6 lg:mt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#7a6f52]">Reset access</p>
-                <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
+                <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
                   Forgot your <span className="text-[#2a5232]">password</span>?
                 </h1>
                 <p className="mt-3 max-w-md text-[15px] leading-relaxed text-[#6f6d5f]">
@@ -116,12 +116,12 @@ export default function ForgotPasswordPage() {
               </div>
 
               {!sent ? (
-                <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
+                <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4 sm:space-y-5">
                   <div className="space-y-1.5">
                     <label htmlFor="email" className="text-sm font-medium text-[#6f6d5f]">Email address</label>
                     <div className="relative">
                       <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><MailIcon /></span>
-                      <input id="email" type="email" autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                      <input id="email" type="email" autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                     </div>
                   </div>
 
@@ -131,13 +131,13 @@ export default function ForgotPasswordPage() {
                     </p>
                   )}
 
-                  <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-4 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60">
+                  <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-3 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 sm:py-4">
                     {submitting ? "Sending…" : "Send Reset Link"}
                   </button>
                 </form>
               ) : (
-                <div className="mt-8 rounded-2xl border border-[#2a5232]/20 bg-[#2a5232]/5 p-6 text-center">
-                  <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-[#2a5232]/10 text-[#2a5232]">
+                <div className="mt-6 rounded-2xl border border-[#2a5232]/20 bg-[#2a5232]/5 p-5 text-center">
+                  <div className="mx-auto mb-3 grid h-10 w-10 place-items-center rounded-full bg-[#2a5232]/10 text-[#2a5232]">
                     <MailIcon />
                   </div>
                   <p className="text-sm font-semibold text-[#1a2419]">Check your email</p>
@@ -150,7 +150,7 @@ export default function ForgotPasswordPage() {
                 </div>
               )}
 
-              <p className="mt-8 text-center text-sm text-[#6f6d5f]">
+              <p className="mt-6 text-center text-sm text-[#6f6d5f]">
                 Remember your password?{" "}
                 <Link href="/login" className="font-semibold text-[#2a5232] transition-colors hover:text-[#1d4024]">Log in</Link>
               </p>

@@ -71,7 +71,7 @@ export default function WishlistSection() {
           title="Your saved styles"
           description="Products you saved for later."
         />
-        <Panel className="mt-6 p-6 text-sm text-muted">Loading your wishlist…</Panel>
+        <Panel className="mt-5 p-5 text-sm text-muted">Loading your wishlist…</Panel>
       </section>
     );
   }
@@ -84,7 +84,7 @@ export default function WishlistSection() {
           title="Your saved styles"
           description="Products you saved for later."
         />
-        <Panel className="mt-6 flex flex-col items-center gap-4 px-6 py-16 text-center">
+        <Panel className="mt-5 flex flex-col items-center gap-3 px-6 py-16 text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-surface text-muted">
             <HeartIcon className="h-6 w-6" />
           </span>
@@ -98,7 +98,7 @@ export default function WishlistSection() {
           </div>
           <a
             href="/shoes"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
           >
             Browse the shop
           </a>
@@ -115,7 +115,7 @@ export default function WishlistSection() {
         description={`${items.length} item${items.length === 1 ? "" : "s"} saved for later.`}
       />
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-4">
         {items.map((item) => {
           const stock = stockInfo(item.stockTotal);
           const inBag = bagIds.includes(item.id);
@@ -127,7 +127,7 @@ export default function WishlistSection() {
               className="group flex flex-col overflow-hidden transition-colors"
             >
               <div
-                className="relative flex h-40 items-center justify-center overflow-hidden sm:h-44"
+                className="relative flex h-36 items-center justify-center overflow-hidden sm:h-44"
                 aria-hidden="true"
               >
                 <div
@@ -176,7 +176,7 @@ export default function WishlistSection() {
                 </button>
               </div>
 
-              <div className="flex flex-1 flex-col p-4">
+              <div className="flex flex-1 flex-col p-3 sm:p-4">
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-muted">
                   {item.brandName}
                 </p>
@@ -218,7 +218,7 @@ export default function WishlistSection() {
                     <button
                       type="button"
                       onClick={() => addToBag(item.id)}
-                      className={`inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs font-bold uppercase tracking-widest transition-colors ${
+                      className={`inline-flex flex-1 items-center justify-center gap-2 rounded-full px-3.5 py-2 text-xs font-bold uppercase tracking-widest transition-colors sm:px-4 sm:py-2.5 ${
                         inBag
                           ? "border border-accent/40 bg-accent/10 text-accent"
                           : "bg-accent text-black hover:bg-accent-hover"
@@ -229,7 +229,7 @@ export default function WishlistSection() {
                   )}
                   <a
                     href={`/product/${item.slug}`}
-                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent sm:px-4 sm:py-2.5"
                   >
                     View Product
                     <ArrowRightIcon className="h-3.5 w-3.5" />

@@ -58,7 +58,7 @@ export default function ProductGalleryMain({
 
       <GalleryBadge product={product} />
 
-      <div className="relative flex items-center justify-center p-6 sm:p-8 lg:p-10">
+      <div className="relative flex items-center justify-center p-4 sm:p-8 lg:p-10">
         {isShoe ? (
           <ShoeVisual
             accent={accent}
@@ -104,7 +104,7 @@ export function ThumbnailStrip({
             aria-pressed={active}
             aria-label={`View ${image.alt}`}
             className={`relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-xl border bg-surface transition-all duration-200 ${
-              isShoe ? "h-12 w-16 sm:h-14 sm:w-20" : "aspect-[4/5] h-16 w-[3.25rem]"
+              isShoe ? "h-12 w-16 sm:h-14 sm:w-20" : "aspect-[4/5] h-14 w-12 sm:h-16 sm:w-[3.25rem]"
             } ${
               active
                 ? "border-accent ring-1 ring-accent"

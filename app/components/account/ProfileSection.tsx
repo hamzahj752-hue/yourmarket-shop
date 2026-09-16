@@ -80,8 +80,8 @@ export default function ProfileSection() {
         description="Keep your details up to date so orders, delivery and support stay smooth."
       />
 
-      <Panel className="mt-6 p-6 sm:p-8">
-        <div className="grid gap-5 sm:grid-cols-2">
+      <Panel className="mt-5 p-4 sm:p-8">
+        <div className="grid gap-3 sm:grid-cols-2 sm:gap-5">
           <Field label="Full Name">
             <input
               type="text"
@@ -160,7 +160,7 @@ export default function ProfileSection() {
           <div className="flex items-end sm:col-span-2">
             <div className="flex items-center gap-3">
               {saved ? (
-                <span className="inline-flex flex-1 items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-3 text-sm font-semibold text-emerald-400">
+                <span className="inline-flex flex-1 items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-2.5 text-sm font-semibold text-emerald-400">
                   <CheckIcon className="h-4 w-4" />
                   Saved
                 </span>
@@ -169,7 +169,7 @@ export default function ProfileSection() {
                   type="button"
                   disabled={saving}
                   onClick={handleSave}
-                  className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover disabled:opacity-60"
                 >
                   <PencilIcon className="h-4 w-4" />
                   {saving ? "Saving…" : "Save Changes"}

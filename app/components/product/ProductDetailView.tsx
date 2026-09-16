@@ -221,7 +221,7 @@ function InfoPanel({
         <StockInfo product={product} />
       </div>
 
-      <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.05]">
+      <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.05]">
         {product.name}
       </h1>
 
@@ -254,7 +254,7 @@ function InfoPanel({
         )}
       </div>
 
-      <p className="mt-5 max-w-prose text-base leading-relaxed text-muted">
+      <p className="mt-5 max-w-prose text-sm leading-relaxed text-muted sm:text-base">
         {product.description}
       </p>
 
@@ -299,7 +299,7 @@ function InfoPanel({
                     setSelectedSize(size);
                   }}
                   aria-pressed={active}
-                  className={`inline-flex h-11 min-w-11 items-center justify-center rounded-full border px-4 text-sm font-bold transition-colors duration-200 ${
+                  className={`inline-flex h-10 min-w-10 items-center justify-center rounded-full border px-4 text-sm font-bold transition-colors duration-200 sm:h-11 sm:min-w-11 ${
                     active
                       ? "border-accent bg-accent text-black"
                       : "border-border bg-card text-foreground hover:border-accent/60 hover:text-accent"
@@ -418,7 +418,7 @@ function InfoPanel({
           type="button"
           onClick={onAddToCart}
           disabled={soldOut || added}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-4 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-500"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-3 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-500"
         >
           {added ? <CheckIcon /> : <CartIcon />}
           {added ? "Added" : "Add to Cart"}
@@ -427,7 +427,7 @@ function InfoPanel({
           type="button"
           onClick={onBuyNow}
           disabled={soldOut}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-4 py-4 text-sm font-bold uppercase tracking-widest text-background transition-colors duration-200 hover:bg-white disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-500"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-3 py-3 text-sm font-bold uppercase tracking-widest text-background transition-colors duration-200 hover:bg-white disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-500"
         >
           Buy Now
         </button>

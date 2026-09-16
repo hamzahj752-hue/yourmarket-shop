@@ -99,15 +99,15 @@ export default function PrivacySection() {
         description="Manage your password, privacy preferences and how we communicate with you."
       />
 
-      <div className="mt-6 space-y-6">
-        <Panel className="p-6 sm:p-8">
+      <div className="mt-5 space-y-4">
+        <Panel className="p-4 sm:p-8">
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
               <KeyIcon className="h-4 w-4" />
             </span>
             <h3 className="text-base font-bold text-foreground">Password</h3>
           </div>
-          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          <div className="mt-4 grid gap-3 sm:grid-cols-3 sm:gap-4">
             <Field label="Current password">
               <input
                 type="password"
@@ -136,9 +136,9 @@ export default function PrivacySection() {
               />
             </Field>
           </div>
-          <div className="mt-5">
+          <div className="mt-4">
             {passwordSaved ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-3 text-sm font-semibold text-emerald-400">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-2.5 text-sm font-semibold text-emerald-400">
                 <CheckIcon className="h-4 w-4" />
                 Password updated
               </span>
@@ -146,7 +146,7 @@ export default function PrivacySection() {
               <button
                 type="button"
                 onClick={savePassword}
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
               >
                 <KeyIcon className="h-4 w-4" />
                 Update Password
@@ -155,7 +155,7 @@ export default function PrivacySection() {
           </div>
         </Panel>
 
-        <Panel className="p-6 sm:p-8">
+        <Panel className="p-4 sm:p-8">
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
               <ShieldIcon className="h-4 w-4" />
@@ -168,7 +168,7 @@ export default function PrivacySection() {
             {preferenceRows.map((row) => (
               <div
                 key={row.key}
-                className="flex items-center justify-between gap-4 py-4"
+                className="flex items-center justify-between gap-4 py-3 sm:py-4"
               >
                 <div>
                   <p className="text-sm font-semibold text-foreground">{row.label}</p>
@@ -186,7 +186,7 @@ export default function PrivacySection() {
           </div>
         </Panel>
 
-        <Panel className="p-6 sm:p-8">
+        <Panel className="p-4 sm:p-8">
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
               <LogoutIcon className="h-4 w-4" />
@@ -203,7 +203,7 @@ export default function PrivacySection() {
             {marketingRows.map((row) => (
               <div
                 key={row.key}
-                className="flex items-center justify-between gap-4 py-4"
+                className="flex items-center justify-between gap-4 py-3 sm:py-4"
               >
                 <div>
                   <p className="text-sm font-semibold text-foreground">{row.label}</p>
@@ -221,7 +221,7 @@ export default function PrivacySection() {
           </div>
         </Panel>
 
-        <Panel className="p-6 sm:p-8">
+        <Panel className="p-4 sm:p-8">
           <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
               <MonitorIcon className="h-4 w-4" />
@@ -263,7 +263,7 @@ export default function PrivacySection() {
         </Panel>
 
         <Panel className="border-rose-400/30 p-6 sm:p-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-4">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-rose-400/40 bg-rose-400/10 text-rose-400">
                 <TrashIcon className="h-4 w-4" />
@@ -281,7 +281,7 @@ export default function PrivacySection() {
             <button
               type="button"
               onClick={() => setConfirmDelete(true)}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-rose-400/40 bg-rose-400/10 px-6 py-3 text-sm font-bold uppercase tracking-widest text-rose-400 transition-colors hover:bg-rose-400 hover:text-black"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-rose-400/40 bg-rose-400/10 px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-rose-400 transition-colors hover:bg-rose-400 hover:text-black"
             >
               <TrashIcon className="h-4 w-4" />
               Delete Account
@@ -306,22 +306,22 @@ export default function PrivacySection() {
                 Delete your account?
               </h3>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               This will permanently remove your profile, orders, addresses and
               saved items. This action cannot be undone.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:gap-3">
               <button
                 type="button"
                 onClick={() => setConfirmDelete(false)}
-                className="inline-flex flex-1 items-center justify-center rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex flex-1 items-center justify-center rounded-full border border-border bg-surface px-5 py-2.5 text-sm font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
               >
                 Keep my account
               </button>
               <button
                 type="button"
                 onClick={() => setConfirmDelete(false)}
-                className="inline-flex flex-1 items-center justify-center rounded-full bg-rose-400 px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-rose-300"
+                className="inline-flex flex-1 items-center justify-center rounded-full bg-rose-400 px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-rose-300"
               >
                 Delete permanently
               </button>

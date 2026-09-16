@@ -34,13 +34,13 @@ export default function ShoeTypes() {
 
   return (
     <section id="types" className="border-b border-border">
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">
               Pick your lane
             </p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">
               Shoe Types
             </h2>
           </div>
@@ -53,20 +53,20 @@ export default function ShoeTypes() {
         <div
           role="group"
           aria-label="Select a shoe type"
-          className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6"
+          className="mt-10 grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-3 xl:grid-cols-6"
         >
           <button
             type="button"
             aria-pressed={activeId === ALL_TYPES_ID}
             onClick={() => setActiveId(ALL_TYPES_ID)}
-            className={`group flex flex-col items-start gap-4 rounded-3xl border p-5 text-left transition-all duration-200 ${
+            className={`group flex flex-col items-start gap-4 rounded-3xl border p-4 sm:p-5 text-left transition-all duration-200 ${
               activeId === ALL_TYPES_ID
                 ? "border-lime-300/60 bg-lime-300/10 shadow-[0_0_28px_rgba(163,230,53,0.15)]"
                 : "border-border bg-card hover:-translate-y-0.5 hover:border-lime-300/40"
             }`}
           >
             <span
-              className={`flex h-12 w-12 items-center justify-center rounded-2xl border transition-colors ${
+              className={`flex h-10 w-10 items-center justify-center rounded-2xl border transition-colors ${
                 activeId === ALL_TYPES_ID
                   ? "border-lime-300/40 bg-lime-300/15 text-lime-300"
                   : "border-border bg-surface text-muted group-hover:text-lime-300"
@@ -75,7 +75,7 @@ export default function ShoeTypes() {
               <SneakerGlyph />
             </span>
             <span>
-              <span className="block text-base font-bold text-foreground">
+              <span className="block text-sm font-bold text-foreground sm:text-base">
                 All Styles
               </span>
               <span className="mt-0.5 block text-sm text-muted">
@@ -93,7 +93,7 @@ export default function ShoeTypes() {
               type="button"
               aria-pressed={activeId === category.id}
               onClick={() => setActiveId(category.id)}
-              className={`group flex flex-col items-start gap-4 rounded-3xl border p-5 text-left transition-all duration-200 ${
+              className={`group flex flex-col items-start gap-4 rounded-3xl border p-4 sm:p-5 text-left transition-all duration-200 ${
                 activeId === category.id
                   ? "border-[color:var(--cat-accent)] bg-card shadow-[0_18px_50px_-20px_rgba(0,0,0,0.9),0_0_30px_var(--cat-accent)]"
                   : "border-border bg-card hover:-translate-y-0.5 hover:bg-card-hover"
@@ -105,7 +105,7 @@ export default function ShoeTypes() {
               }
             >
               <span
-                className={`flex h-12 w-12 items-center justify-center rounded-2xl border transition-colors ${
+                className={`flex h-10 w-10 items-center justify-center rounded-2xl border transition-colors ${
                   activeId === category.id
                     ? "border-transparent"
                     : "border-border bg-surface text-muted group-hover:text-foreground"
@@ -121,7 +121,7 @@ export default function ShoeTypes() {
                 <SneakerGlyph />
               </span>
               <span>
-                <span className="block text-base font-bold text-foreground">
+                <span className="block text-sm font-bold text-foreground sm:text-base">
                   {category.name}
                 </span>
                 <span className="mt-0.5 block text-sm text-muted">

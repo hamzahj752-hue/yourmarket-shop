@@ -30,10 +30,10 @@ const POLICY_LINKS = [
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="max-w-xs">
-            <Link href="/" className="text-xl font-black tracking-widest">
+            <Link href="/" className="text-lg font-black tracking-widest sm:text-xl">
               YOUR<span className="text-accent">MARKET</span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted">

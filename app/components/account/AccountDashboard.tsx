@@ -106,7 +106,7 @@ export default function AccountDashboard() {
   };
 
   const navItemClasses = (id: SectionId) =>
-    `group flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
+    `group flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors ${
       section === id
         ? "border border-accent/50 bg-accent/10 text-accent"
         : "border border-transparent text-muted hover:bg-surface hover:text-foreground"
@@ -120,7 +120,7 @@ export default function AccountDashboard() {
       <p className="text-xs font-semibold uppercase tracking-widest text-accent">
         Member Account
       </p>
-      <h1 className="mt-1 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+      <h1 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
         Welcome back, {authLoading ? "…" : firstName}
       </h1>
       <p className="mt-2 text-sm text-muted">
@@ -129,7 +129,7 @@ export default function AccountDashboard() {
 
       <div className="mt-8 lg:mt-10 lg:grid lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-10">
         <aside className="lg:sticky lg:top-28 lg:self-start">
-          <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5">
+          <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 sm:p-5">
             <Avatar name={displayName} className="h-14 w-14" />
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold text-foreground">
@@ -202,7 +202,7 @@ export default function AccountDashboard() {
                     document.getElementById("account-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
                   }}
                   aria-current={section === item.id ? "page" : undefined}
-                  className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-xs font-semibold uppercase tracking-widest transition-colors ${
+                  className={`flex shrink-0 items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${
                     section === item.id
                       ? "border-accent/60 bg-accent/10 text-accent"
                       : "border-border bg-card text-muted"

@@ -168,7 +168,7 @@ export default function ShoeCard({ product }: { product: ShoeProduct }) {
         </div>
 
         <div className="mt-0.5 flex flex-wrap items-baseline gap-2">
-          <span className="text-base font-black text-foreground sm:text-lg">
+          <span className="text-sm font-black text-foreground sm:text-lg">
             {formatPrice(price)}
           </span>
           {oldPrice && (

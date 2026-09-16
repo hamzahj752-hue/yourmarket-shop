@@ -141,7 +141,7 @@ export default function AddressesSection() {
       {loading && addresses.length === 0 ? (
         <p className="mt-6 text-sm text-muted">Loading addresses…</p>
       ) : (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-4">
           {addresses.map((address) => {
             const KindIcon = kindIcon[address.label ?? ""] ?? MapPinIcon;
             const tone = kindIconClass[address.label ?? ""] ?? "bg-surface border-border text-muted";
@@ -187,7 +187,7 @@ export default function AddressesSection() {
                       type="button"
                       onClick={() => setDefault(address.id)}
                       disabled={busyId === address.id}
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
+                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1.5 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
                     >
                       <CheckIcon className="h-3.5 w-3.5" />
                       Set Default
@@ -197,7 +197,7 @@ export default function AddressesSection() {
                     type="button"
                     onClick={() => openEdit(address)}
                     disabled={busyId === address.id}
-                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
+                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1.5 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
                   >
                     <PencilIcon className="h-3.5 w-3.5" />
                     Edit
@@ -207,7 +207,7 @@ export default function AddressesSection() {
                     onClick={() => remove(address.id)}
                     disabled={busyId === address.id}
                     aria-label={`Delete ${address.label ?? "address"}`}
-                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-muted transition-colors hover:border-rose-400 hover:text-rose-400 disabled:opacity-50"
+                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1.5 text-xs font-semibold text-muted transition-colors hover:border-rose-400 hover:text-rose-400 disabled:opacity-50"
                   >
                     <TrashIcon className="h-3.5 w-3.5" />
                     Delete
@@ -233,11 +233,11 @@ export default function AddressesSection() {
       )}
 
       {draftState !== "closed" && (
-        <Panel className="mt-6 p-6 sm:p-8">
+        <Panel className="mt-5 p-4 sm:p-8">
           <h3 className="text-base font-bold text-foreground">
             {draftState === "adding" ? "Add a new address" : "Edit address"}
           </h3>
-          <form onSubmit={saveDraft} className="mt-5 grid gap-4 sm:grid-cols-2">
+          <form onSubmit={saveDraft} className="mt-4 grid gap-3 sm:grid-cols-2 sm:gap-4">
             <label className="block sm:col-span-2">
               <span className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-muted">
                 Label
@@ -310,11 +310,11 @@ export default function AddressesSection() {
                 onChange={(e) => setDraft((prev) => ({ ...prev, phone: e.target.value }))}
               />
             </label>
-            <div className="mt-6 flex flex-wrap gap-3 sm:col-span-2">
+            <div className="mt-5 flex flex-wrap gap-2.5 sm:col-span-2 sm:gap-3">
               <button
                 type="submit"
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover disabled:opacity-60"
               >
                 <CheckIcon className="h-4 w-4" />
                 {draftState === "adding" ? "Save Address" : "Save Changes"}
@@ -323,7 +323,7 @@ export default function AddressesSection() {
                 type="button"
                 onClick={closeDraft}
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-2.5 text-sm font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
               >
                 Cancel
               </button>

@@ -76,22 +76,22 @@ export default function CouponsSection() {
       {loading ? (
         <p className="mt-6 text-sm text-muted">Loading coupons…</p>
       ) : coupons.length === 0 ? (
-        <Panel className="mt-6 p-6 text-center">
+        <Panel className="mt-5 p-5 text-center">
           <TicketIcon className="mx-auto h-6 w-6 text-muted" />
           <p className="mt-3 text-sm text-muted">
             No active coupons right now — check back soon.
           </p>
         </Panel>
       ) : (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-4">
           {coupons.map((coupon) => {
             const isCopied = copied === coupon.code;
             return (
               <Panel
                 key={coupon.code}
-                className="flex items-center gap-4 border-dashed p-5 transition-colors hover:border-accent/40"
+                className="flex items-center gap-3 border-dashed p-5 transition-colors hover:border-accent/40"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
                   <TicketIcon className="h-5 w-5" />
                 </span>
 
@@ -114,7 +114,7 @@ export default function CouponsSection() {
                   type="button"
                   onClick={() => copyCode(coupon.code, coupon.code)}
                   aria-label={`Copy code ${coupon.code}`}
-                  className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-widest transition-colors ${
+                  className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest transition-colors ${
                     isCopied
                       ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-400"
                       : "border-border bg-surface text-foreground hover:border-accent hover:text-accent"
@@ -138,7 +138,7 @@ export default function CouponsSection() {
         </div>
       )}
 
-      <Panel className="mt-6 p-5">
+      <Panel className="mt-5 p-5">
         <p className="text-sm leading-relaxed text-muted">
           Coupons are validated against your account at checkout. Promo codes
           are applied to the order total.

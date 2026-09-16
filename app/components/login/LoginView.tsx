@@ -271,7 +271,7 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#7a6f52]">
                   Welcome back
                 </p>
-                <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
+                <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
                   Log in to{" "}
                   <span className="text-[#2a5232]">YOURMARKET</span>
                 </h1>
@@ -283,7 +283,7 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
               <form
                 onSubmit={handleSubmit}
                 noValidate
-                className="mt-8 space-y-5"
+                className="mt-6 space-y-4 sm:space-y-5"
               >
                 <div className="space-y-1.5">
                   <label
@@ -306,7 +306,7 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
                         setEmail(e.target.value);
                         setError(null);
                       }}
-                      className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20"
+                      className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4"
                     />
                   </div>
                 </div>
@@ -340,7 +340,7 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
                         setPassword(e.target.value);
                         setError(null);
                       }}
-                      className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20"
+                      className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4"
                     />
                     <button
                       type="button"
@@ -387,7 +387,7 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full rounded-2xl bg-[#2a5232] py-4 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full rounded-2xl bg-[#2a5232] py-3 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 sm:py-4"
                 >
                   {submitting ? "Logging in…" : "Log in"}
                 </button>
@@ -403,14 +403,23 @@ export default function LoginView({ nextPath }: { nextPath?: string }) {
 
               <button
                 type="button"
-                onClick={() => setError("Google sign-in isn’t configured yet. Use your email and password.")}
-                className="flex w-full items-center justify-center gap-3 rounded-2xl border border-black/10 bg-white/85 py-4 text-[15px] font-semibold text-[#1a2419] shadow-sm transition hover:bg-white hover:shadow-md active:scale-[0.99]"
+                onClick={async () => {
+                  setError(null);
+                  const { error: oauthError } = await supabaseClient.auth.signInWithOAuth({
+                    provider: "google",
+                    options: {
+                      redirectTo: `${window.location.origin}/auth/callback`,
+                    },
+                  });
+                  if (oauthError) setError(oauthError.message);
+                }}
+                className="flex w-full items-center justify-center gap-3 rounded-2xl border border-black/10 bg-white/85 py-3 text-[15px] font-semibold text-[#1a2419] shadow-sm transition hover:bg-white hover:shadow-md active:scale-[0.99] sm:py-4"
               >
                 <GoogleIcon />
                 Continue with Google
               </button>
 
-              <p className="mt-8 text-center text-sm text-[#6f6d5f]">
+              <p className="mt-6 text-center text-sm text-[#6f6d5f]">
                 New to YOURMARKET?{" "}
                 <Link
                   href="/signup"

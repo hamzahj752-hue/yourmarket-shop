@@ -154,7 +154,7 @@ export default function NotificationsSection() {
 
   return (
     <section aria-labelledby="notifications-heading">
-      <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="flex flex-wrap items-end justify-between gap-3">
         <SectionHeader
           eyebrow="Notifications"
           title="Your activity"
@@ -164,20 +164,20 @@ export default function NotificationsSection() {
           <button
             type="button"
             onClick={markAllRead}
-            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-4 py-2 text-xs font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
           >
             Mark all as read
           </button>
         )}
       </div>
 
-      <div className="no-scrollbar mt-6 flex gap-2 overflow-x-auto pb-1">
+      <div className="no-scrollbar mt-5 flex gap-2 overflow-x-auto pb-1">
         {filters.map((value) => (
           <button
             key={value}
             type="button"
             onClick={() => setFilter(value)}
-            className={`shrink-0 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${
+            className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest transition-colors ${
               filter === value
                 ? "border-accent/60 bg-accent/10 text-accent"
                 : "border-border bg-surface text-muted hover:text-foreground"
@@ -202,7 +202,7 @@ export default function NotificationsSection() {
               return (
                 <li
                   key={notification.id}
-                  className={`flex gap-4 p-4 transition-colors hover:bg-surface/60 sm:px-6 ${
+                  className={`flex gap-3 p-3 transition-colors hover:bg-surface/60 sm:px-6 ${
                     index > 0 ? "border-t border-border" : ""
                   } ${notification.read ? "" : "bg-accent/[0.03]"}`}
                 >

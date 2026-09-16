@@ -43,7 +43,7 @@ function Select({
         id={label}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="appearance-none rounded-full border border-border bg-card py-2.5 pl-4 pr-9 text-sm font-medium text-foreground transition-colors duration-200 hover:border-accent/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+        className="appearance-none rounded-full border border-border bg-card py-2 pl-4 pr-9 text-sm font-medium text-foreground transition-colors duration-200 hover:border-accent/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-2.5"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -123,15 +123,15 @@ export default function CategoryView({
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:py-20">
+        <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-10 sm:px-6 sm:py-16 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:py-20">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">
               {category.eyebrow}
             </p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">
               {category.name}
             </h1>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted sm:text-base">
               {category.description}
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
@@ -194,7 +194,7 @@ export default function CategoryView({
                   key={type}
                   type="button"
                   onClick={() => setSelectedType(type)}
-                  className={`inline-flex shrink-0 items-center rounded-full border px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
+                  className={`inline-flex shrink-0 items-center rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors duration-200 sm:px-4 sm:py-2 ${
                     active
                       ? "border-accent bg-accent text-black"
                       : "border-border bg-card text-muted hover:border-accent/50 hover:text-accent"
@@ -294,7 +294,7 @@ export default function CategoryView({
       <section aria-label="Product catalog">
         <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
           {filtered.length > 0 ? (
-            <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
               {filtered.map((product) => (
                 <ProductCard key={product.slug} product={product} />
               ))}

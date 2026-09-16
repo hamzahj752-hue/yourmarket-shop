@@ -168,7 +168,7 @@ function SearchInput({ id }: { id: string }) {
         name="q"
         type="search"
         placeholder="Search products…"
-        className="w-full rounded-full border border-border bg-surface py-2.5 pl-10 pr-4 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+        className="w-full rounded-full border border-border bg-surface py-2 pl-9 pr-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-2.5 sm:pl-10 sm:pr-4"
       />
       <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted">
         <SearchIcon />

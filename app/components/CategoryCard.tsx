@@ -35,9 +35,9 @@ export default function CategoryCard({
         </span>
       </div>
 
-      <div className="flex items-center justify-between gap-3 p-4 sm:p-5">
+      <div className="flex items-center justify-between gap-3 p-3 sm:p-5">
         <span className="min-w-0">
-          <span className="block truncate text-base font-bold text-foreground">
+          <span className="block truncate text-sm font-bold text-foreground">
             {name}
           </span>
           <span className="mt-0.5 block text-sm text-muted">

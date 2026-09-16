@@ -181,13 +181,13 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
       </Link>
 
       {/* Order header */}
-      <div className="mt-4 rounded-3xl border border-border bg-card p-6 sm:p-8">
+      <div className="mt-4 rounded-3xl border border-border bg-card p-4 sm:p-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">
               Order detail
             </p>
-            <h1 className="mt-1 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+            <h1 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
               <span className="text-muted">#</span>{data.order_number}
             </h1>
             <p className="mt-2 text-sm text-muted">
@@ -205,7 +205,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
               onClick={() => {
                 showToast("Invoice downloads will be available here.");
               }}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
             >
               <DownloadIcon className="h-4 w-4" />
               Invoice
@@ -213,7 +213,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
             <button
               type="button"
               onClick={() => window.print()}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
             >
               <PrinterIcon className="h-4 w-4" />
               Print
@@ -230,8 +230,8 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
 
       {/* Delivery progress */}
       {cancelled ? (
-        <div className="mt-8 rounded-3xl border border-rose-400/30 bg-rose-400/[0.06] p-6 sm:p-8">
-          <div className="flex items-start gap-4">
+        <div className="mt-8 rounded-3xl border border-rose-400/30 bg-rose-400/[0.06] p-4 sm:p-8">
+          <div className="flex items-start gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-rose-400/40 bg-rose-400/10 text-lg font-black text-rose-400">
               ✕
             </span>
@@ -248,11 +248,11 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
           </div>
         </div>
       ) : (
-        <div className="mt-8 rounded-3xl border border-border bg-card p-6 sm:p-8">
+        <div className="mt-8 rounded-3xl border border-border bg-card p-4 sm:p-8">
           <h2 className="text-sm font-black uppercase tracking-widest text-foreground">
             Delivery progress
           </h2>
-          <div className="no-scrollbar mt-6 overflow-x-auto">
+          <div className="no-scrollbar mt-5 overflow-x-auto">
             <div className="min-w-[620px]">
               <ProgressStepper progressIndex={progressIndex} />
             </div>
@@ -260,16 +260,16 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
         </div>
       )}
 
-      <div className="mt-8 gap-6 xl:grid xl:grid-cols-[minmax(0,1fr)_380px]">
-        <div className="space-y-6 xl:min-w-0">
+      <div className="mt-6 gap-4 sm:gap-6 xl:grid xl:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="space-y-4 sm:space-y-6 xl:min-w-0">
           {/* Timeline */}
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+          <section className="rounded-3xl border border-border bg-card p-4 sm:p-8">
             <h2 className="text-sm font-black uppercase tracking-widest text-foreground">
               Order timeline
             </h2>
-            <ol className="mt-6 space-y-0">
+            <ol className="mt-5 space-y-0">
               {timeline.map((event, index) => (
-                <li key={event.id} className="relative flex gap-4 pb-8 last:pb-0">
+                <li key={event.id} className="relative flex gap-3 pb-7 last:pb-0">
                   <div className="flex flex-col items-center">
                     <span
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border ${
@@ -331,15 +331,15 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
           </section>
 
           {/* Order items */}
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+          <section className="rounded-3xl border border-border bg-card p-4 sm:p-8">
             <h2 className="text-sm font-black uppercase tracking-widest text-foreground">
               Order items
             </h2>
-            <ul className="mt-5 divide-y divide-border">
+            <ul className="mt-4 divide-y divide-border">
               {items.map((item) => (
                 <li
                   key={`${item.product_slug}-${item.size}`}
-                  className="flex gap-4 py-4 first:pt-0 last:pb-0"
+                  className="flex gap-3 py-3 first:pt-0 last:pb-0 sm:py-4"
                 >
                   <ProductThumb
                     name={item.product_name}
@@ -375,7 +375,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
           </section>
 
           {/* Tracking information */}
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+          <section className="rounded-3xl border border-border bg-card p-4 sm:p-8">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-muted">
                 <TrackIcon className="h-5 w-5" />
@@ -393,9 +393,9 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
         </div>
 
         {/* Right column */}
-        <div className="space-y-6 xl:min-w-0">
+        <div className="space-y-4 sm:space-y-6 xl:min-w-0">
           {/* Deliver to + payment */}
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-7">
+          <section className="rounded-3xl border border-border bg-card p-5 sm:p-7">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
                 <MapPinIcon className="h-5 w-5" />
@@ -427,7 +427,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
             </address>
           </section>
 
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-7">
+          <section className="rounded-3xl border border-border bg-card p-5 sm:p-7">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
                 <CardIcon className="h-5 w-5" />
@@ -445,7 +445,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
           </section>
 
           {/* Summary */}
-          <section className="rounded-3xl border border-border bg-card p-6 sm:p-7">
+          <section className="rounded-3xl border border-border bg-card p-5 sm:p-7">
             <h2 className="text-sm font-black uppercase tracking-widest text-foreground">
               Summary
             </h2>
@@ -494,9 +494,9 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
       </div>
 
       {/* Bottom actions */}
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
-        <section className="flex flex-col items-start gap-4 rounded-3xl border border-border bg-card p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-          <div className="flex items-center gap-4">
+      <div className="mt-6 grid gap-3 sm:gap-4 md:grid-cols-2">
+        <section className="flex flex-col items-start gap-3 rounded-3xl border border-border bg-card p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+          <div className="flex items-center gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
               <PhoneIcon className="h-5 w-5" />
             </span>
@@ -511,15 +511,15 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
           </div>
           <Link
             href="/account"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 text-xs font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
           >
             Contact support
           </Link>
         </section>
 
         {!cancelled && (
-          <section className="flex flex-col items-start gap-4 rounded-3xl border border-border bg-card p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7">
-            <div className="flex items-center gap-4">
+          <section className="flex flex-col items-start gap-3 rounded-3xl border border-border bg-card p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
+            <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
                 <RefreshIcon className="h-5 w-5" />
               </span>
@@ -537,7 +537,7 @@ export default function OrderDetailView({ order }: { order: ShopOrder }) {
                 <Link
                   key={`${item.product_slug}-${item.size}`}
                   href={`/product/${item.product_slug}`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent sm:px-4 sm:py-2.5"
                 >
                   <RefreshIcon className="h-3.5 w-3.5" />
                   {item.product_name}

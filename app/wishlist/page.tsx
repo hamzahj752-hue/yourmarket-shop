@@ -140,10 +140,10 @@ export default function WishlistPage() {
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Saved items</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Your Wishlist</h1>
-            <p className="mt-4 text-base text-muted">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">Your Wishlist</h1>
+            <p className="mt-4 text-sm text-muted">
               {loading
                 ? "Loading…"
                 : items.length > 0
@@ -164,7 +164,7 @@ export default function WishlistPage() {
             {loading ? (
               <p className="text-sm text-muted">Loading your wishlist…</p>
             ) : items.length > 0 ? (
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                 {items.map((item) => {
                   const isSale = item.salePrice != null;
                   const stock = stockInfo(item.stockTotal);

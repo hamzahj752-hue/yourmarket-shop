@@ -41,10 +41,10 @@ export default function ReturnsPage() {
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Returns</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Returns & Refunds</h1>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">Returns & Refunds</h1>
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">
               Easy returns and hassle-free refunds. Here is how it works.
             </p>
           </div>
@@ -70,10 +70,10 @@ export default function ReturnsPage() {
               <h2 className="text-lg font-bold text-foreground">Need to return an item?</h2>
               <p className="mt-2 text-sm text-muted">Start your return from your account dashboard or get in touch with our support team.</p>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                <Link href="/account" className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
+                <Link href="/account" className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
                   Go to My Orders
                 </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-border bg-card px-6 py-3 text-sm font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent">
+                <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent">
                   Contact Support
                 </Link>
               </div>

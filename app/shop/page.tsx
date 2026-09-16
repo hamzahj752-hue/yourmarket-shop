@@ -49,7 +49,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <span className="relative inline-flex shrink-0">
       <label htmlFor={label} className="sr-only">{label}</label>
-      <select id={label} value={value} onChange={(e) => onChange(e.target.value)} className="appearance-none rounded-full border border-border bg-card py-2.5 pl-4 pr-9 text-sm font-medium text-foreground transition-colors duration-200 hover:border-accent/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+      <select id={label} value={value} onChange={(e) => onChange(e.target.value)} className="appearance-none rounded-full border border-border bg-card py-2 pl-4 pr-9 text-sm font-medium text-foreground transition-colors duration-200 hover:border-accent/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
         {options.map((o) => (<option key={o.value} value={o.value}>{o.label}</option>))}
       </select>
       <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-muted"><ChevronDownIcon /></span>
@@ -136,10 +136,10 @@ export default function ShopPage() {
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
           <div className="pointer-events-none absolute -bottom-40 -right-40 h-64 w-64 rounded-full bg-accent/5 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Yourmarket</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">All Products</h1>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">All Products</h1>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted sm:text-base">
               Browse the complete YOURMARKET collection. Filter by category, brand, size or price to find exactly what you need.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
@@ -164,7 +164,7 @@ export default function ShopPage() {
               {["All", ...ALL_CATEGORIES].map((cat) => {
                 const active = selectedCategory === cat;
                 return (
-                  <button key={cat} type="button" onClick={() => setSelectedCategory(cat)} className={`inline-flex shrink-0 items-center rounded-full border px-4 py-2 text-sm font-semibold transition-colors duration-200 ${active ? "border-accent bg-accent text-black" : "border-border bg-card text-muted hover:border-accent/50 hover:text-accent"}`}>
+                  <button key={cat} type="button" onClick={() => setSelectedCategory(cat)} className={`inline-flex shrink-0 items-center rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors duration-200 ${active ? "border-accent bg-accent text-black" : "border-border bg-card text-muted hover:border-accent/50 hover:text-accent"}`}>
                     {cat === "All" ? "All" : CATEGORY_LABELS[cat] || cat}
                   </button>
                 );
@@ -216,7 +216,7 @@ export default function ShopPage() {
                 </div>
 
                 <div className="sm:col-span-2 lg:col-span-1">
-                  <button type="button" onClick={clearAll} className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-muted transition-colors hover:border-accent/50 hover:text-accent">
+                  <button type="button" onClick={clearAll} className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-sm font-semibold text-muted transition-colors hover:border-accent/50 hover:text-accent">
                     <XIcon /> Clear all filters
                   </button>
                 </div>
@@ -228,7 +228,7 @@ export default function ShopPage() {
         <section aria-label="Product catalog">
           <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
             {filtered.length > 0 ? (
-              <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
                 {filtered.map((product) => (
                   <ProductCard key={product.slug} product={product} />
                 ))}

@@ -90,7 +90,7 @@ export default function Benefits() {
         {BENEFITS.map((benefit) => (
           <div
             key={benefit.title}
-            className="flex items-start gap-4 rounded-2xl border border-border bg-card p-4 transition-colors duration-300 hover:border-accent/40 hover:bg-card-hover sm:p-5"
+            className="flex items-start gap-4 rounded-2xl border border-border bg-card p-3 transition-colors duration-300 hover:border-accent/40 hover:bg-card-hover sm:p-5"
           >
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
               {benefit.icon}

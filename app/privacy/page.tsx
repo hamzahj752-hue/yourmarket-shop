@@ -48,10 +48,10 @@ export default function PrivacyPage() {
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Legal</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Privacy Policy</h1>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">Privacy Policy</h1>
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">
               How we collect, use and protect your personal information.
             </p>
             <p className="mt-3 text-xs text-muted">Last updated: September 2026</p>

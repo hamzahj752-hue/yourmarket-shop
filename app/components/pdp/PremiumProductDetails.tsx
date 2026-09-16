@@ -236,7 +236,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
         </nav>
 
         <div className="relative mt-3 grid min-h-0 flex-1 items-stretch lg:grid-cols-[7fr_5fr]">
-              <div className="relative flex min-h-[340px] items-center justify-center overflow-hidden px-6 py-12 sm:min-h-[440px] sm:py-14 lg:min-h-0 lg:py-8">
+              <div className="relative flex min-h-[340px] items-center justify-center overflow-hidden px-4 py-10 sm:min-h-[440px] sm:px-6 sm:py-14 lg:min-h-0 lg:py-8">
                 {/* Soft editorial stage — tonal lift that fades instead of a boxed boundary */}
                 <div
                   className="pointer-events-none absolute inset-0 transition-colors duration-700"
@@ -279,7 +279,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                   className="relative z-10 animate-[ym-rise_0.5s_ease]"
                 >
                   <div
-                    className="flex items-center justify-center rounded-full p-6 transition-colors duration-700 sm:p-8 lg:p-7"
+                    className="flex items-center justify-center rounded-full p-4 transition-colors duration-700 sm:p-8 lg:p-7"
                     style={{
                       backgroundColor: theme.isLight
                         ? "rgba(255,255,255,0.55)"
@@ -336,7 +336,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
               </div>
 
               <div
-                className="relative min-h-0 border-t p-6 transition-colors duration-700 sm:p-8 lg:border-l lg:border-t-0 lg:flex lg:flex-col lg:overflow-y-auto lg:px-8 lg:py-6"
+                className="relative min-h-0 border-t p-4 transition-colors duration-700 sm:p-8 lg:border-l lg:border-t-0 lg:flex lg:flex-col lg:overflow-y-auto lg:px-8 lg:py-6"
                 style={{ borderColor: theme.hairline }}
               >
                 <div>
@@ -526,7 +526,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                             type="button"
                             aria-pressed={active}
                             onClick={() => setSelectedSize(size)}
-                            className="rounded-xl border py-2.5 text-sm font-bold transition-all duration-200 hover:brightness-110"
+                            className="rounded-xl border py-2 text-sm font-bold transition-all duration-200 hover:brightness-110 sm:py-2.5"
                             style={
                               active
                                 ? {
@@ -576,7 +576,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                       type="button"
                       aria-label="Decrease quantity"
                       onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border transition-all hover:brightness-110 active:scale-95"
+                      className="inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border transition-all hover:brightness-110 active:scale-95"
                       style={{
                         color: theme.body,
                         borderColor: theme.isLight
@@ -597,7 +597,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                       type="button"
                       aria-label="Increase quantity"
                       onClick={() => setQuantity((q) => Math.min(10, q + 1))}
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-full border transition-all hover:brightness-110 active:scale-95"
+                      className="inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border transition-all hover:brightness-110 active:scale-95"
                       style={{
                         color: theme.body,
                         borderColor: theme.isLight
@@ -654,7 +654,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                       type="button"
                       onClick={() => handleAddToBag(false)}
                       disabled={busy}
-                      className="inline-flex w-full items-center justify-center rounded-full px-7 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="inline-flex w-full items-center justify-center rounded-full px-6 py-2.5 sm:px-7 sm:py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                       style={{
                         backgroundColor: theme.cta,
                         color: theme.ctaText,
@@ -668,7 +668,7 @@ export default function PremiumProductDetails({ product }: { product: Product })
                     type="button"
                     onClick={() => handleAddToBag(true)}
                     disabled={busy}
-                    className="inline-flex w-full items-center justify-center rounded-full border px-7 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="inline-flex w-full items-center justify-center rounded-full border px-6 py-2.5 sm:px-7 sm:py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
                     style={{
                       borderColor: theme.isLight
                         ? "rgba(0,0,0,0.22)"

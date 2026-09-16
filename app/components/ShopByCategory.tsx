@@ -184,7 +184,7 @@ const CATEGORIES = [
 export default function ShopByCategory() {
   return (
     <section id="categories" className="border-b border-border">
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">

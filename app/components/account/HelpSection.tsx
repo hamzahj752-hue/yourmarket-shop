@@ -60,7 +60,7 @@ export default function HelpSection() {
           placeholder="Search help… e.g. return an item"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full rounded-full border border-border bg-surface py-3.5 pl-12 pr-5 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="w-full rounded-full border border-border bg-surface py-3 pl-12 pr-5 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
         />
       </div>
 
@@ -71,7 +71,7 @@ export default function HelpSection() {
               key={category}
               type="button"
               onClick={() => setActiveCategory(category)}
-              className={`shrink-0 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-widest transition-colors ${
+              className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest transition-colors ${
                 activeCategory === category
                   ? "border-accent/60 bg-accent/10 text-accent"
                   : "border-border bg-surface text-muted hover:text-foreground"
@@ -83,7 +83,7 @@ export default function HelpSection() {
         )}
       </div>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-2">
+      <div className="mt-4 grid gap-3 sm:gap-4 lg:grid-cols-2">
         {results.map((article) => (
           <Panel
             key={article.id}
@@ -118,8 +118,8 @@ export default function HelpSection() {
         </Panel>
       )}
 
-      <Panel className="mt-6 flex flex-col items-start gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-4">
+      <Panel className="mt-5 flex flex-col items-start gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-3">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
             <LifeBuoyIcon className="h-5 w-5" />
           </span>
@@ -132,7 +132,7 @@ export default function HelpSection() {
         </div>
         <button
           type="button"
-          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
         >
           <UserIcon className="h-4 w-4" />
           Start a chat

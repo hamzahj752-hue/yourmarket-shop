@@ -30,7 +30,7 @@ import {
 const money = (value: number) => `$${value.toFixed(2)}`;
 
 const inputClasses =
-  "w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors";
+  "w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors sm:py-3";
 
 type CheckoutLine = {
   productId: string;
@@ -243,7 +243,7 @@ export default function CheckoutView() {
       <p className="text-xs font-semibold uppercase tracking-widest text-accent">
         Secure Checkout
       </p>
-      <h1 className="mt-1 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+      <h1 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
         Checkout
       </h1>
       <p className="mt-2 text-sm text-muted">
@@ -253,7 +253,7 @@ export default function CheckoutView() {
       </p>
 
       {loadError ? (
-        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-border bg-card px-6 py-20 text-center">
+        <div className="mt-10 flex flex-col items-center gap-3 rounded-3xl border border-border bg-card px-6 py-14 text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-surface text-muted">
             <CreditCardIcon className="h-6 w-6" />
           </span>
@@ -268,13 +268,13 @@ export default function CheckoutView() {
           <button
             type="button"
             onClick={() => load()}
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
           >
             Try again
           </button>
         </div>
       ) : !loading && lines.length === 0 ? (
-        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-border bg-card px-6 py-20 text-center">
+        <div className="mt-10 flex flex-col items-center gap-3 rounded-3xl border border-border bg-card px-6 py-14 text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-surface text-muted">
             <CreditCardIcon className="h-6 w-6" />
           </span>
@@ -288,17 +288,17 @@ export default function CheckoutView() {
           </div>
           <Link
             href="/"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
           >
             Continue shopping
           </Link>
         </div>
       ) : (
         <div className="mt-8 gap-8 lg:mt-10 lg:grid lg:grid-cols-[minmax(0,1fr)_400px]">
-          <div className="space-y-5">
+          <div className="space-y-4">
             {/* Contact */}
             <Step index={1} title="Contact information" icon={<UserIcon className="h-4 w-4" />}>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <label className="block">
                   <span className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-muted">
                     Email
@@ -390,7 +390,7 @@ export default function CheckoutView() {
                   </button>
                 </>
               ) : (
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3 sm:grid-cols-2">
                   <label className="block sm:col-span-2">
                     <span className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-muted">
                       Full name
@@ -551,7 +551,7 @@ export default function CheckoutView() {
 
           {/* Order summary */}
           <aside className="mt-8 lg:sticky lg:top-28 lg:self-start">
-            <div className="rounded-3xl border border-border bg-card p-6 sm:p-7">
+            <div className="rounded-3xl border border-border bg-card p-5 sm:p-7">
               <h2 className="text-base font-black uppercase tracking-widest text-foreground">
                 Your order
               </h2>
@@ -595,11 +595,11 @@ export default function CheckoutView() {
                       setCouponError(null);
                     }}
                     placeholder="e.g. WELCOME15"
-                    className="w-full min-w-0 rounded-full border border-border bg-surface px-4 py-3 text-sm uppercase text-foreground placeholder:normal-case placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                    className="w-full min-w-0 rounded-full border border-border bg-surface px-4 py-2.5 text-sm uppercase text-foreground placeholder:normal-case placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-full border border-accent/50 bg-accent/10 px-5 py-3 text-xs font-bold uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-black"
+                    className="shrink-0 rounded-full border border-accent/50 bg-accent/10 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-black"
                   >
                     Apply
                   </button>
@@ -695,7 +695,7 @@ function Step({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+    <section className="rounded-3xl border border-border bg-card p-4 sm:p-8">
       <div className="flex items-center gap-3">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/50 bg-accent/10 text-accent">
           {icon}
@@ -705,7 +705,7 @@ function Step({
           {title}
         </h2>
       </div>
-      <div className="mt-6">{children}</div>
+      <div className="mt-5">{children}</div>
     </section>
   );
 }

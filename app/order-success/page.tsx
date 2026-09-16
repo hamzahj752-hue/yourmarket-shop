@@ -71,14 +71,14 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
       <>
         <Header />
         <main className="flex-1">
-          <div className="mx-auto w-full max-w-2xl px-4 py-20 text-center">
+          <div className="mx-auto w-full max-w-2xl px-4 py-14 text-center">
             <h1 className="text-2xl font-black text-foreground">Order not found</h1>
             <p className="mt-3 text-sm text-muted">
               We couldn&apos;t find the order you&apos;re looking for.
             </p>
             <Link
               href="/account"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
             >
               Back to My Account
             </Link>
@@ -101,14 +101,14 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
       <>
         <Header />
         <main className="flex-1">
-          <div className="mx-auto w-full max-w-2xl px-4 py-20 text-center">
+          <div className="mx-auto w-full max-w-2xl px-4 py-14 text-center">
             <h1 className="text-2xl font-black text-foreground">Order not found</h1>
             <p className="mt-3 text-sm text-muted">
               We couldn&apos;t find an order matching that reference.
             </p>
             <Link
               href="/account"
-              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
             >
               Back to My Account
             </Link>
@@ -136,14 +136,14 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <div className="mx-auto max-w-2xl text-center">
               <div className="flex justify-center">
                 <CheckCircleIcon />
               </div>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-accent">Order Confirmed</p>
-              <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Thank you for your order</h1>
-              <p className="mt-4 text-base leading-relaxed text-muted">
+              <p className="mt-5 text-xs font-semibold uppercase tracking-widest text-accent">Order Confirmed</p>
+              <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl">Thank you for your order</h1>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
                 We have received your order and are getting it ready. You will
                 receive a confirmation email shortly.
               </p>
@@ -153,10 +153,10 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
 
         <section aria-label="Order details">
           <div className="mx-auto w-full max-w-2xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-            <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <div className="rounded-2xl border border-border bg-card p-4 sm:p-8">
               <h2 className="text-lg font-bold text-foreground">Order Summary</h2>
 
-              <div className="mt-6 space-y-4">
+              <div className="mt-5 space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                     <PackageIcon />
@@ -215,7 +215,7 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
                 </div>
               </div>
 
-              <div className="mt-6 border-t border-border pt-6">
+              <div className="mt-5 border-t border-border pt-5">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-muted">Order Total</span>
                   <span className="text-xl font-black text-accent">{money(total)}</span>
@@ -225,15 +225,15 @@ export default async function OrderSuccessPage({ searchParams }: Props) {
             </div>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href={`/account/orders/${orderId}`} className="flex flex-1 items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-bold text-foreground transition-colors hover:border-accent hover:text-accent">
+              <Link href={`/account/orders/${orderId}`} className="flex flex-1 items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-bold text-foreground transition-colors hover:border-accent hover:text-accent">
                 View Order
               </Link>
-              <Link href="/shop" className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-black transition-colors hover:bg-accent-hover">
+              <Link href="/shop" className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-accent-hover">
                 Continue Shopping
               </Link>
             </div>
 
-            <p className="mt-8 text-center text-xs text-muted">
+            <p className="mt-6 text-center text-xs text-muted">
               Your order has been created. Pay cash on delivery.
             </p>
           </div>

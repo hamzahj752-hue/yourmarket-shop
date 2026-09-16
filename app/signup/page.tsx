@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
@@ -180,9 +180,9 @@ export default function SignupPage() {
               <div className="lg:hidden"><Brand /></div>
               <div className="sr-only lg:not-sr-only"><Brand /></div>
 
-              <div className="mt-8 lg:mt-0">
+              <div className="mt-6 lg:mt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#7a6f52]">Join the club</p>
-                <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
+                <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
                   Create your <span className="text-[#2a5232]">YOURMARKET</span> account
                 </h1>
                 <p className="mt-3 max-w-md text-[15px] leading-relaxed text-[#6f6d5f]">
@@ -190,12 +190,12 @@ export default function SignupPage() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-4">
+              <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-3 sm:space-y-4">
                 <div className="space-y-1.5">
                   <label htmlFor="fullName" className="text-sm font-medium text-[#6f6d5f]">Full Name</label>
                   <div className="relative">
                     <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><UserIcon /></span>
-                    <input id="fullName" type="text" autoComplete="name" placeholder="Alex Morgan" value={fullName} onChange={(e) => { setFullName(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                    <input id="fullName" type="text" autoComplete="name" placeholder="Alex Morgan" value={fullName} onChange={(e) => { setFullName(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ export default function SignupPage() {
                   <label htmlFor="email" className="text-sm font-medium text-[#6f6d5f]">Email</label>
                   <div className="relative">
                     <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><MailIcon /></span>
-                    <input id="email" type="email" autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                    <input id="email" type="email" autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                   </div>
                 </div>
 
@@ -211,7 +211,7 @@ export default function SignupPage() {
                   <label htmlFor="phone" className="text-sm font-medium text-[#6f6d5f]">Phone (optional)</label>
                   <div className="relative">
                     <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><PhoneIcon /></span>
-                    <input id="phone" type="tel" autoComplete="tel" placeholder="+1 (555) 000-0000" value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                    <input id="phone" type="tel" autoComplete="tel" placeholder="+1 (555) 000-0000" value={phone} onChange={(e) => setPhone(e.target.value)} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-4 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                   </div>
                 </div>
 
@@ -219,7 +219,7 @@ export default function SignupPage() {
                   <label htmlFor="password" className="text-sm font-medium text-[#6f6d5f]">Password</label>
                   <div className="relative">
                     <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><LockIcon /></span>
-                    <input id="password" type={showPassword ? "text" : "password"} autoComplete="new-password" placeholder="Min 8 characters" value={password} onChange={(e) => { setPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                    <input id="password" type={showPassword ? "text" : "password"} autoComplete="new-password" placeholder="Min 8 characters" value={password} onChange={(e) => { setPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                     <button type="button" aria-label={showPassword ? "Hide password" : "Show password"} onClick={() => setShowPassword((v) => !v)} className="absolute inset-y-0 right-4 flex items-center text-[#9a937f] transition-colors hover:text-[#37663f]">
                       <EyeIcon off={showPassword} />
                     </button>
@@ -230,7 +230,7 @@ export default function SignupPage() {
                   <label htmlFor="confirmPassword" className="text-sm font-medium text-[#6f6d5f]">Confirm Password</label>
                   <div className="relative">
                     <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><LockIcon /></span>
-                    <input id="confirmPassword" type={showConfirm ? "text" : "password"} autoComplete="new-password" placeholder="Repeat your password" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                    <input id="confirmPassword" type={showConfirm ? "text" : "password"} autoComplete="new-password" placeholder="Repeat your password" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                     <button type="button" aria-label={showConfirm ? "Hide password" : "Show password"} onClick={() => setShowConfirm((v) => !v)} className="absolute inset-y-0 right-4 flex items-center text-[#9a937f] transition-colors hover:text-[#37663f]">
                       <EyeIcon off={showConfirm} />
                     </button>
@@ -255,7 +255,7 @@ export default function SignupPage() {
                   </p>
                 )}
 
-                <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-4 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60">
+                <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-3 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 sm:py-4">
                   {submitting ? "Creating account…" : "Create Account"}
                 </button>
               </form>
@@ -266,11 +266,20 @@ export default function SignupPage() {
                 <span className="h-px flex-1 bg-black/10" />
               </div>
 
-              <button type="button" onClick={() => setError("Google sign-in isn’t configured yet. Use your email and password.")} className="flex w-full items-center justify-center gap-3 rounded-2xl border border-black/10 bg-white/85 py-4 text-[15px] font-semibold text-[#1a2419] shadow-sm transition hover:bg-white hover:shadow-md active:scale-[0.99]">
+              <button type="button" onClick={async () => {
+                  setError(null);
+                  const { error: oauthError } = await supabaseClient.auth.signInWithOAuth({
+                    provider: "google",
+                    options: {
+                      redirectTo: `${window.location.origin}/auth/callback`,
+                    },
+                  });
+                  if (oauthError) setError(oauthError.message);
+                }} className="flex w-full items-center justify-center gap-3 rounded-2xl border border-black/10 bg-white/85 py-3 text-[15px] font-semibold text-[#1a2419] shadow-sm transition hover:bg-white hover:shadow-md active:scale-[0.99] sm:py-4">
                 <GoogleIcon /> Continue with Google
               </button>
 
-              <p className="mt-8 text-center text-sm text-[#6f6d5f]">
+              <p className="mt-6 text-center text-sm text-[#6f6d5f]">
                 Already have an account?{" "}
                 <Link href="/login" className="font-semibold text-[#2a5232] transition-colors hover:text-[#1d4024]">Log in</Link>
               </p>

@@ -172,7 +172,7 @@ export default function CartView() {
       <p className="text-xs font-semibold uppercase tracking-widest text-accent">
         Shopping Cart
       </p>
-      <h1 className="mt-1 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+      <h1 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
         Your bag
       </h1>
       <p className="mt-2 text-sm text-muted">
@@ -182,7 +182,7 @@ export default function CartView() {
       </p>
 
       {!loading && lines.length === 0 ? (
-        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-border bg-card px-6 py-20 text-center">
+        <div className="mt-10 flex flex-col items-center gap-3 rounded-3xl border border-border bg-card px-6 py-14 text-center">
           <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-surface text-muted">
             <CreditCardIcon className="h-6 w-6" />
           </span>
@@ -197,13 +197,13 @@ export default function CartView() {
           </div>
           <Link
             href="/"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
           >
             Continue shopping
           </Link>
         </div>
       ) : (
-        <div className="mt-8 gap-8 lg:mt-10 lg:grid lg:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="mt-6 gap-5 lg:mt-10 lg:grid lg:grid-cols-[minmax(0,1fr)_380px]">
           <div>
             {loading ? (
               <p className="text-sm text-muted">Loading your bag…</p>
@@ -212,12 +212,12 @@ export default function CartView() {
                 {lines.map((line) => (
                   <li
                     key={line.id}
-                    className="rounded-2xl border border-border bg-card p-4 transition-colors hover:border-border sm:p-5"
+                    className="rounded-2xl border border-border bg-card p-3 transition-colors hover:border-border sm:p-5"
                   >
-                    <div className="flex gap-4">
+                    <div className="flex gap-3">
                       <Link
                         href={`/product/${line.slug}`}
-                        className="group relative block h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-border bg-surface sm:h-28 sm:w-28"
+                        className="group relative block h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-border bg-surface sm:h-28 sm:w-28"
                         aria-label={`View ${line.name}`}
                       >
                         <LineArt accent={line.accent} colorHex={line.color.hex} />
@@ -318,7 +318,7 @@ export default function CartView() {
           </div>
 
           <aside className="mt-8 lg:sticky lg:top-28 lg:self-start">
-            <div className="rounded-3xl border border-border bg-card p-6 sm:p-7">
+            <div className="rounded-3xl border border-border bg-card p-5 sm:p-7">
               <h2 className="text-base font-black uppercase tracking-widest text-foreground">
                 Order Summary
               </h2>
@@ -392,12 +392,12 @@ export default function CartView() {
                       setPromoError(null);
                     }}
                     placeholder="e.g. WELCOME15"
-                    className="w-full min-w-0 rounded-full border border-border bg-surface px-4 py-3 text-sm uppercase text-foreground placeholder:normal-case placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                    className="w-full min-w-0 rounded-full border border-border bg-surface px-4 py-2.5 text-sm uppercase text-foreground placeholder:normal-case placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                   />
                   <button
                     type="submit"
                     disabled={promoBusy}
-                    className="shrink-0 rounded-full border border-accent/50 bg-accent/10 px-5 py-3 text-xs font-bold uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
+                    className="shrink-0 rounded-full border border-accent/50 bg-accent/10 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-accent transition-colors hover:bg-accent hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     Apply
                   </button>
@@ -421,7 +421,7 @@ export default function CartView() {
               </Link>
               <Link
                 href="/shoes"
-                className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
+                className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-border px-5 py-2.5 text-sm font-semibold uppercase tracking-widest text-muted transition-colors hover:border-accent hover:text-accent"
               >
                 Continue shopping
               </Link>

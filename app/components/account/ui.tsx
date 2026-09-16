@@ -65,7 +65,7 @@ export function Field({
 }
 
 export const inputClasses =
-  "w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors";
+  "w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors sm:py-3";
 
 type BadgeTone = "muted" | "lime" | "emerald" | "cyan" | "amber" | "rose";
 

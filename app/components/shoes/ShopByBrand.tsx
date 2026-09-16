@@ -15,13 +15,13 @@ export default function ShopByBrand() {
 
   return (
     <section id="brands" className="border-b border-border bg-surface/40">
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-lime-300">
               Find your label
             </p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">
               Shop By Brand
             </h2>
           </div>
@@ -40,7 +40,7 @@ export default function ShopByBrand() {
             type="button"
             aria-pressed={activeId === ALL_BRANDS_ID}
             onClick={() => setActiveId(ALL_BRANDS_ID)}
-            className={`shrink-0 rounded-full border px-5 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
+            className={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-bold uppercase tracking-wider transition-all duration-200 sm:px-5 sm:py-3 ${
               activeId === ALL_BRANDS_ID
                 ? "border-lime-300/60 bg-lime-300/10 text-lime-300 shadow-[0_0_24px_rgba(163,230,53,0.2)]"
                 : "border-border bg-card text-muted hover:border-lime-300/40 hover:text-foreground"
@@ -54,7 +54,7 @@ export default function ShopByBrand() {
               type="button"
               aria-pressed={activeId === brand.id}
               onClick={() => setActiveId(brand.id)}
-              className={`shrink-0 rounded-full border px-5 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
+              className={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-bold uppercase tracking-wider transition-all duration-200 sm:px-5 sm:py-3 ${
                 activeId === brand.id
                   ? "border-lime-300/60 bg-lime-300/10 text-lime-300 shadow-[0_0_24px_rgba(163,230,53,0.2)]"
                   : "border-border bg-card text-muted hover:border-lime-300/40 hover:text-foreground"

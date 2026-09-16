@@ -65,7 +65,7 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         </div>
 
-        <div className="flex flex-1 flex-col gap-1 p-3 sm:p-4">
+        <div className="flex flex-1 flex-col gap-1 p-2.5 sm:p-4">
           <span className="text-[11px] font-semibold uppercase tracking-wider text-muted">
             {product.brand}
           </span>

@@ -49,16 +49,16 @@ export default function NextProduct({
       href={href}
       className={
         isLight
-          ? "group flex items-center gap-3 overflow-hidden rounded-2xl border border-black/10 bg-white/85 p-3 shadow-[0_22px_50px_-22px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-black/25"
-          : "group flex items-center gap-3 overflow-hidden rounded-2xl border border-white/10 bg-black/60 p-3 shadow-[0_22px_50px_-22px_rgba(0,0,0,0.9)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25"
+          ? "group flex items-center gap-3 overflow-hidden rounded-2xl border border-black/10 bg-white/85 p-2.5 shadow-[0_22px_50px_-22px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-black/25"
+          : "group flex items-center gap-3 overflow-hidden rounded-2xl border border-white/10 bg-black/60 p-2.5 shadow-[0_22px_50px_-22px_rgba(0,0,0,0.9)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25"
       }
       aria-label={`Next product: ${name}, ${price}`}
     >
       <span
         className={
           isLight
-            ? "inline-flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-black/10 bg-white/70"
-            : "inline-flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-surface"
+            ? "inline-flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-black/10 bg-white/70"
+            : "inline-flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-surface"
         }
       >
         {visual}

@@ -192,7 +192,7 @@ export default function ShoeProductDetails({
         />
       </div>
 
-      <div className="relative mx-auto flex w-full max-w-[84rem] flex-col overflow-hidden px-4 pb-6 pt-4 sm:px-6 lg:px-10 lg:pb-8 lg:pt-5 xl:max-w-[100rem] 2xl:max-w-[112rem] 2xl:px-16">
+      <div className="relative mx-auto flex w-full max-w-[84rem] flex-col overflow-hidden px-4 pb-4 pt-4 sm:px-6 sm:pb-6 lg:px-10 lg:pb-8 lg:pt-5 xl:max-w-[100rem] 2xl:max-w-[112rem] 2xl:px-16">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb">
           <Link
@@ -304,7 +304,7 @@ export default function ShoeProductDetails({
           </div>
 
           {/* ─── RIGHT: Compact product info panel ─── */}
-          <div className="order-2 min-h-0 p-4 transition-colors duration-700 sm:p-5 lg:flex lg:flex-col lg:overflow-y-auto lg:border-l lg:px-6 lg:py-5" style={{ borderColor: theme.isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.06)" }}>
+          <div className="order-2 min-h-0 p-3 transition-colors duration-700 sm:p-5 lg:flex lg:flex-col lg:overflow-y-auto lg:border-l lg:px-6 lg:py-5" style={{ borderColor: theme.isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.06)" }}>
             {/* Brand + name */}
             <p
               className="text-[11px] font-bold uppercase tracking-[0.2em] transition-colors duration-700 lg:text-[10px]"
@@ -480,7 +480,7 @@ export default function ShoeProductDetails({
                 type="button"
                 onClick={() => handleAddToBag(false)}
                 disabled={busy}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 lg:py-3"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-2.5 sm:px-7 sm:py-3 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 lg:py-3"
                 style={{
                   backgroundColor: theme.cta,
                   color: theme.ctaText,
@@ -499,7 +499,7 @@ export default function ShoeProductDetails({
                       ? `Remove ${product.name} from wishlist`
                       : `Add ${product.name} to wishlist`
                   }
-                  className={`inline-flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full border transition-colors duration-200 lg:h-[44px] lg:w-[44px] ${
+                  className={`inline-flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border transition-colors duration-200 lg:h-[44px] lg:w-[44px] ${
                     wishlisted
                       ? "border-rose-400/60 bg-rose-400/15 text-rose-400"
                       : "border-border bg-card hover:border-white/30"
@@ -512,7 +512,7 @@ export default function ShoeProductDetails({
                   type="button"
                   onClick={() => handleAddToBag(true)}
                   disabled={busy}
-                  className="inline-flex w-full items-center justify-center rounded-full border px-7 py-3 text-sm font-bold uppercase tracking-widest backdrop-blur transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-60 lg:py-2.5"
+                  className="inline-flex w-full items-center justify-center rounded-full border px-6 py-2.5 sm:px-7 sm:py-3 text-sm font-bold uppercase tracking-widest backdrop-blur transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-60 lg:py-2.5"
                   style={{
                     borderColor: `${theme.cta}55`,
                     color: theme.cta,

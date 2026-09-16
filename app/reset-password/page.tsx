@@ -130,9 +130,9 @@ export default function ResetPasswordPage() {
               <div className="lg:hidden"><Brand /></div>
               <div className="sr-only lg:not-sr-only"><Brand /></div>
 
-              <div className="mt-8 lg:mt-0">
+              <div className="mt-6 lg:mt-0">
                 <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#7a6f52]">Set new password</p>
-                <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
+                <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#1a2419] sm:text-4xl">
                   Reset your <span className="text-[#2a5232]">password</span>
                 </h1>
                 <p className="mt-3 max-w-md text-[15px] leading-relaxed text-[#6f6d5f]">
@@ -141,12 +141,12 @@ export default function ResetPasswordPage() {
               </div>
 
               {!reset ? (
-                <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
+                <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4 sm:space-y-5">
                   <div className="space-y-1.5">
                     <label htmlFor="newPassword" className="text-sm font-medium text-[#6f6d5f]">New Password</label>
                     <div className="relative">
                       <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><LockIcon /></span>
-                      <input id="newPassword" type={showPassword ? "text" : "password"} autoComplete="new-password" placeholder="Min 8 characters" value={password} onChange={(e) => { setPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                      <input id="newPassword" type={showPassword ? "text" : "password"} autoComplete="new-password" placeholder="Min 8 characters" value={password} onChange={(e) => { setPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                       <button type="button" aria-label={showPassword ? "Hide password" : "Show password"} onClick={() => setShowPassword((v) => !v)} className="absolute inset-y-0 right-4 flex items-center text-[#9a937f] transition-colors hover:text-[#37663f]">
                         <EyeIcon off={showPassword} />
                       </button>
@@ -157,7 +157,7 @@ export default function ResetPasswordPage() {
                     <label htmlFor="confirmPassword" className="text-sm font-medium text-[#6f6d5f]">Confirm Password</label>
                     <div className="relative">
                       <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#9a937f]"><LockIcon /></span>
-                      <input id="confirmPassword" type={showConfirm ? "text" : "password"} autoComplete="new-password" placeholder="Repeat your password" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-4 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20" />
+                      <input id="confirmPassword" type={showConfirm ? "text" : "password"} autoComplete="new-password" placeholder="Repeat your password" value={confirmPassword} onChange={(e) => { setConfirmPassword(e.target.value); setError(null); }} className="w-full rounded-2xl border border-white/80 bg-white/75 py-3 pl-12 pr-12 text-[15px] text-[#1a2419] shadow-sm outline-none transition placeholder:text-[#b0aa98] focus:border-[#37663f] focus:ring-2 focus:ring-[#37663f]/20 sm:py-4" />
                       <button type="button" aria-label={showConfirm ? "Hide password" : "Show password"} onClick={() => setShowConfirm((v) => !v)} className="absolute inset-y-0 right-4 flex items-center text-[#9a937f] transition-colors hover:text-[#37663f]">
                         <EyeIcon off={showConfirm} />
                       </button>
@@ -170,7 +170,7 @@ export default function ResetPasswordPage() {
                     </p>
                   )}
 
-                  <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-4 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60">
+                  <button type="submit" disabled={submitting} className="w-full rounded-2xl bg-[#2a5232] py-3 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60 sm:py-4">
                     {submitting ? "Resetting…" : "Reset Password"}
                   </button>
                 </form>
@@ -181,7 +181,7 @@ export default function ResetPasswordPage() {
                   <p className="mt-2 text-sm text-[#6f6d5f]">
                     Your password has been updated. You can now log in with your new password.
                   </p>
-                  <Link href="/login" className="mt-6 inline-flex items-center justify-center rounded-2xl bg-[#2a5232] px-8 py-4 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99]">
+                  <Link href="/login" className="mt-5 inline-flex items-center justify-center rounded-2xl bg-[#2a5232] px-6 py-3 text-[15px] font-semibold text-white shadow-[0_12px_30px_-12px_rgba(42,82,50,0.65)] transition-all duration-200 hover:bg-[#37663f] active:scale-[0.99]">
                     Go to Log in
                   </Link>
                   <p className="mt-4 text-xs text-[#9a937f]">

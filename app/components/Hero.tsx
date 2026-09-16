@@ -12,7 +12,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-24">
+      <div className="relative mx-auto grid w-full max-w-7xl gap-6 px-4 py-10 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-24">
         <div className="max-w-xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             <span className="relative flex h-2 w-2" aria-hidden="true">
@@ -22,7 +22,7 @@ export default function Hero() {
             New Season Collection
           </p>
 
-          <h1 className="mt-6 text-3xl font-black leading-[1.1] tracking-tight sm:text-5xl sm:leading-[1.05] lg:text-6xl xl:text-7xl">
+          <h1 className="mt-6 text-2xl font-black leading-[1.1] tracking-tight sm:text-5xl sm:leading-[1.05] lg:text-6xl xl:text-7xl">
             Style That
             <br />
             Speaks For{" "}
@@ -31,12 +31,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:mt-6 sm:text-lg">
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted sm:text-base sm:mt-6 sm:text-lg">
             Curated menswear, footwear and essentials for those who take pride
             in how they show up. Free shipping on every order, no exceptions.
           </p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:items-center">
             <Link
               href="/shop"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-widest text-black shadow-[0_0_28px_rgba(163,230,53,0.35)] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(163,230,53,0.5)] sm:w-auto"

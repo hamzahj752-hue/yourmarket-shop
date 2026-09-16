@@ -49,7 +49,7 @@ export default function OrdersSection() {
 
       <div className="mt-6 space-y-4">
         {loading ? (
-          <Panel className="p-6 text-sm text-muted">Loading your orders…</Panel>
+          <Panel className="p-5 text-sm text-muted">Loading your orders…</Panel>
         ) : orders.length === 0 ? (
           <Panel className="flex flex-col items-center gap-3 px-6 py-14 text-center">
             <span className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
@@ -61,7 +61,7 @@ export default function OrdersSection() {
             </p>
             <Link
               href="/shop"
-              className="mt-1 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
+              className="mt-1 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover"
             >
               Start Shopping
               <ArrowRightIcon className="h-3.5 w-3.5" />
@@ -71,9 +71,9 @@ export default function OrdersSection() {
           orders.map((order) => (
             <Panel
               key={order.id}
-              className="flex flex-col gap-4 p-4 transition-colors hover:border-border sm:p-5 lg:flex-row lg:items-center"
+              className="flex flex-col gap-3 p-3 transition-colors hover:border-border sm:p-5 lg:flex-row lg:items-center"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3">
                 <div className="flex -space-x-3">
                   <ProductThumb
                     name={order.order_number}
@@ -109,7 +109,7 @@ export default function OrdersSection() {
                 </span>
                 <Link
                   href={`/account/orders/${order.id}`}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-4 py-2 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-foreground transition-colors hover:border-accent hover:text-accent"
                 >
                   View Order
                   <ArrowRightIcon className="h-3.5 w-3.5" />

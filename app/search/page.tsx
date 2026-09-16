@@ -84,12 +84,12 @@ function SearchContent() {
       <main className="flex-1">
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Search</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">
               {query ? <>Results for &ldquo;{query}&rdquo;</> : "Search Products"}
             </h1>
-            <p className="mt-4 text-base text-muted">
+            <p className="mt-4 text-sm text-muted">
               {filtered.length} {filtered.length === 1 ? "product" : "products"} found
             </p>
           </div>
@@ -109,7 +109,7 @@ function SearchContent() {
               {["All", ...ALL_CATEGORIES].map((cat) => {
                 const active = selectedCategory === cat;
                 return (
-                  <button key={cat} type="button" onClick={() => setSelectedCategory(cat)} className={`inline-flex shrink-0 items-center rounded-full border px-4 py-2 text-sm font-semibold transition-colors duration-200 ${active ? "border-accent bg-accent text-black" : "border-border bg-card text-muted hover:border-accent/50 hover:text-accent"}`}>
+                  <button key={cat} type="button" onClick={() => setSelectedCategory(cat)} className={`inline-flex shrink-0 items-center rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors duration-200 ${active ? "border-accent bg-accent text-black" : "border-border bg-card text-muted hover:border-accent/50 hover:text-accent"}`}>
                     {cat === "All" ? "All" : CATEGORY_LABELS[cat] || cat}
                   </button>
                 );
@@ -141,7 +141,7 @@ function SearchContent() {
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-border bg-card/50 px-6 py-20 text-center">
+              <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-border bg-card/50 px-6 py-14 text-center">
                 <div className="mb-4 text-muted opacity-30">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-16 w-16"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.35-4.35" /></svg>
                 </div>
@@ -149,7 +149,7 @@ function SearchContent() {
                 <p className="mt-2 max-w-sm text-sm text-muted">
                   {query ? <>We couldn&apos;t find anything matching &ldquo;{query}&rdquo;. Try different keywords or browse all products.</> : "Enter a search query to find products."}
                 </p>
-                <Link href="/shop" className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
+                <Link href="/shop" className="mt-5 inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
                   Browse All Products
                 </Link>
               </div>

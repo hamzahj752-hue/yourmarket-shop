@@ -47,10 +47,10 @@ export default function ContactPage() {
         <section className="relative overflow-hidden border-b border-border">
           <div className="pointer-events-none absolute -left-40 -top-40 h-64 w-64 rounded-full bg-accent/10 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
           <div className="pointer-events-none absolute -bottom-40 -right-40 h-64 w-64 rounded-full bg-accent/5 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
-          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent">Get in touch</p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">Contact Us</h1>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
+            <h1 className="mt-3 text-2xl font-black tracking-tight sm:text-4xl lg:text-5xl">Contact Us</h1>
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">
               Have a question, suggestion or just want to say hello? We would love to hear from you.
             </p>
           </div>
@@ -58,41 +58,41 @@ export default function ContactPage() {
 
         <section aria-label="Contact form and information">
           <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-            <div className="grid gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
+            <div className="grid gap-5 sm:gap-8 lg:grid-cols-[1fr_380px] lg:gap-12">
               <div>
                 <h2 className="text-lg font-bold text-foreground">Send us a message</h2>
                 <p className="mt-1 text-sm text-muted">We typically respond within 1-2 business days.</p>
 
                 {!submitted ? (
-                  <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} noValidate className="mt-6 space-y-5">
-                    <div className="grid gap-5 sm:grid-cols-2">
+                  <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} noValidate className="mt-5 space-y-4 sm:space-y-5">
+                    <div className="grid gap-3 sm:grid-cols-2 sm:gap-5">
                       <div className="space-y-1.5">
                         <label htmlFor="name" className="text-sm font-medium text-muted">Name</label>
-                        <input id="name" type="text" required placeholder="Your name" className="w-full rounded-2xl border border-border bg-card px-4 py-3.5 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" />
+                        <input id="name" type="text" required placeholder="Your name" className="w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-3.5" />
                       </div>
                       <div className="space-y-1.5">
                         <label htmlFor="email" className="text-sm font-medium text-muted">Email</label>
-                        <input id="email" type="email" required placeholder="you@example.com" className="w-full rounded-2xl border border-border bg-card px-4 py-3.5 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" />
+                        <input id="email" type="email" required placeholder="you@example.com" className="w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-3.5" />
                       </div>
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="subject" className="text-sm font-medium text-muted">Subject</label>
-                      <input id="subject" type="text" required placeholder="How can we help?" className="w-full rounded-2xl border border-border bg-card px-4 py-3.5 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" />
+                      <input id="subject" type="text" required placeholder="How can we help?" className="w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-3.5" />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="message" className="text-sm font-medium text-muted">Message</label>
-                      <textarea id="message" rows={5} required placeholder="Tell us more..." className="w-full resize-none rounded-2xl border border-border bg-card px-4 py-3.5 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" />
+                      <textarea id="message" rows={5} required placeholder="Tell us more..." className="w-full resize-none rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:py-3.5" />
                     </div>
 
-                    <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
+                    <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-widest text-black transition-colors hover:bg-accent-hover">
                       <SendIcon /> Send Message
                     </button>
                   </form>
                 ) : (
-                  <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/5 p-6 text-center">
-                    <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-accent/10 text-accent">
+                  <div className="mt-5 rounded-2xl border border-accent/20 bg-accent/5 p-5 text-center">
+                    <div className="mx-auto mb-4 grid h-10 w-10 place-items-center rounded-full bg-accent/10 text-accent">
                       <SendIcon />
                     </div>
                     <p className="text-sm font-bold text-foreground">Message sent</p>
@@ -103,10 +103,10 @@ export default function ContactPage() {
                 )}
               </div>
 
-              <div className="space-y-6">
-                <div className="rounded-2xl border border-border bg-card p-6">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="rounded-2xl border border-border bg-card p-5">
                   <h3 className="text-sm font-bold text-foreground">Contact Information</h3>
-                  <div className="mt-4 space-y-4">
+                  <div className="mt-4 space-y-3">
                     {CONTACT_INFO.map((info) => (
                       <div key={info.label} className="flex items-start gap-3">
                         <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">{info.icon}</span>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card p-6">
+                <div className="rounded-2xl border border-border bg-card p-5">
                   <h3 className="text-sm font-bold text-foreground">Quick Links</h3>
                   <div className="mt-4 space-y-2">
                     {HELP_LINKS.map((link) => (

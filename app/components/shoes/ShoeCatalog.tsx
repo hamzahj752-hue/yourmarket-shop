@@ -75,13 +75,13 @@ export default function ShoeCatalog() {
 
   return (
     <section id="catalog" className="border-b border-border">
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-20">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">
               The collection
             </p>
-            <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-4xl">
               Shoe Catalog
             </h2>
           </div>
@@ -110,7 +110,7 @@ export default function ShoeCatalog() {
               <select
                 value={sortId}
                 onChange={(event) => setSortId(event.target.value as SortId)}
-                className="appearance-none rounded-full border border-border bg-surface py-2.5 pl-4 pr-10 text-sm font-medium text-foreground transition-colors hover:border-lime-300/40 focus:border-lime-300 focus:outline-none"
+                className="appearance-none rounded-full border border-border bg-surface py-2 pl-4 pr-10 text-sm font-medium text-foreground transition-colors hover:border-lime-300/40 focus:border-lime-300 focus:outline-none sm:py-2.5"
               >
                 {SORT_OPTIONS.map((option) => (
                   <option key={option.id} value={option.id}>
@@ -179,7 +179,7 @@ export default function ShoeCatalog() {
           </div>
         )}
 
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-2.5 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product) => (
             <ShoeCard key={product.id} product={product} />
           ))}
